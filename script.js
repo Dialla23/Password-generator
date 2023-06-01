@@ -7,6 +7,7 @@ function generatePassword() {
   retVal += charset.charAt(Math.floor(Math.random() * n));
   }
   return retVal;
+  
   }
 
 // Get references to the #generate element
@@ -27,7 +28,10 @@ function writePassword() {
 // Add event listener to generate button
 let sign = prompt("password");
 
-if (sign.toLowerCase() === "scorpio") {
-  alert("Wow! I'm a Scorpio too!");
+if (sign.toLowerCase() === "scorpion") {
+  alert("Wow! I'm a Scorpion too!");
 }
 generateBtn.addEventListener("click", writePassword);
+
+let strings = window.crypto.getRandomValues(new BigUint64Array(2));
+console.log(strings[0].toString(36) + strings[1].toString(36).toUpperCase());
