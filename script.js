@@ -11,9 +11,8 @@ function generatePassword() {
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#password");
-if (window.confirm("Do you really want to leave?")) {
-  window.open("exit.html", "Thanks for Visiting!");
-}g
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -22,6 +21,7 @@ function writePassword() {
   console.log();
   passwordText.value = password;
 
+  
 }
 
 // Add event listener to generate button
